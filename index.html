@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="styles.css" rel="stylesheet" />
+  <title>Weather App</title>
+</head>
+<body>
+  <main>
+    <section id="weather-wrapper">
+      <h1>Weather App</h1>
+      <div id="weather-search">
+        <input id="search" type="text" placeholder="Search by city" />
+        <input id="submit" type="submit" onclick="fetchWeather()" value="Search" />
+      </div>
+      <div id="weather-data" style="display: none;"></div>
+    </section>
+
+    
+  </main>
+  
+  <footer id="copyright">
+    <p>&copy; 2024 NiggaMan. All rights reserved.</p>
+  </footer>
+  
+  <script>
+    const numStars = 100; // Adjust the number of stars
+    const body = document.body;
+  
+    for (let i = 0; i < numStars; i++) {
+      const star = document.createElement('div');
+      star.classList.add('star');
+      const size = Math.random() * 3 + 1; // Random size for stars
+      star.style.width = `${size}px`;
+      star.style.height = `${size}px`;
+      star.style.top = `${Math.random() * 100}vh`;
+      star.style.left = `${Math.random() * 100}vw`;
+      star.style.animationDuration = `${Math.random() * 2 + 1}s`; // Random twinkling speed
+      body.appendChild(star);
+    }
+  </script>
+  
+  <script src="script.js"></script>
+</body>
+</html>
